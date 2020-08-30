@@ -15,12 +15,12 @@ function preview_image(event, id1, id2)	{
  					ctrlImg.src = this.src;
  	 				cmpImg.src = this.src;
  		        }else{
- 		        	alert(`Sorry, width and height of ${event.target.name} not as expected.`);
+ 		        	alert("Sorry, width and height not as expected.");
  		        }
  		    }
  		})
  		reader.readAsDataURL(files);
    	} else {
- 		alert(`Sorry, Please contact support. error code: EPM`);
+ 		alert("Sorry, Please contact support. error code: EPM");
    	}
 }
