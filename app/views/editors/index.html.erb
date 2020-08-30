@@ -11,9 +11,7 @@
 	<section class="left-container">
 		<!-- START logi -->
 		<div class="edit-logo">
-			<div><b>Logo</b> (200px x 50px)</div>
-			<input type="file" accept="image/*" class="custom-file-input">
-			<button class="button">Upload</button>
+			<%= render 'shared/image', caption: '<b>Logo</b> (200px x 50px)', id: 'logo-ctr', target: 'logo-cmp', name: 'logo' %>
 		</div>
 		<!-- END logi -->
 
@@ -29,9 +27,7 @@
 
 		<!-- START main banner -->
 		<div class="edit-mainBanner">
-			<div><b>Main Banner</b> (800px x 400px)</div>
-			<input type="file" accept="image/*" class="custom-file-input">
-			<button class="button">Upload</button>
+			<%= render 'shared/image', caption: '<b>Main Banner</b> (800px x 400px)', id: 'banner-ctrl', target: 'banner-cmp', name: 'banner' %>
 		</div>
 		<!-- END main banner -->
 
@@ -76,9 +72,9 @@
 	<section class="right-container" id='editor-content'>
 		<!-- START logo section -->
 		<div class="logo">
-			<div class="logo__image">
-			<div>Logo Image</div>
-				<img src="" alt="" class="rimg" />
+			<div class="logo_image">
+				<!-- <div>Logo Image</div> -->
+				<img id="logo-cmp" src="" alt="Logo Image" width="200" height="50" class="rimg" autocomplete="off">
 			</div>
 		</div>
 		<!-- END logo section -->
@@ -93,9 +89,9 @@
 
 		<!-- START main banner section -->
 		<div class="banner">
-			<div class="banner__image">
-			<div>Main Banner</div>
-				<img src="" alt="" class="rimg" />
+			<div class="banner_image">
+				<div>Main Banner</div>
+				<img id="banner-cmp" src="" autocomplete="off" class="rimg">
 			</div>
 		</div>
 		<!-- END main banner section -->
@@ -118,77 +114,3 @@
 	</section>
 	<!-- END template -->
 </section>
-
-
-
-<!-- <div style="border-style: ridge;" id='body'>
-
-	<h1>Editors#index</h1>
-
-	<h4>Background Color</h4>
-	 <input type="color" name="bgColor" oninput="backgroundColor(this, 'body')" value="#FFFFFF" autocomplete="off">
-
-	<div id='header' style="border-style: dotted;">
-		Header
-		<h4>Background Color</h4>
-		 <input type="color" name="bgColor" oninput="backgroundColor(this, 'header')" value="#FFFFFF" autocomplete="off">
-		<h4>Text Color</h4>
-		<input type="color" name="textColor" oninput="textColor(this, 'header')" value="#000000" autocomplete="off">
-		this is heder
-	</div>
-
-	<div id='content' style="border-style: solid;">
-		Content
-		<h4>Text Color</h4>
-		<input type="color" name="textColor" oninput="textColor(this, 'content')" value="#000000" autocomplete="off">
-
-		<select name="fontSize" onchange="fontSize(this, 'content')" autocomplete="off">
-		  <option value="10">10</option>
-		  <option value="20">20</option>
-		  <option value="30">30</option>
-		  <option value="40">40</option>
-		</select>
-
-		<select name="fontFamily" onchange="fontFamily(this, 'content')" autocomplete="off">
-			<option value="" disabled selected></option>
-			<option value="Georgia, serif">Georgia, serif</option>
-			<option value="sans-serif">sans-serif</option>
-			<option value="fantasy">fantasy</option>
-			<option value="ui-sans-serif">ui-sans-serif</option>
-			<option value="Arial Narrow">Arial Narrow</option>
-		</select>
-
-		This is content. this is like paragraph
-	</div>
-
-
-	<div id='footer' style="border-style: double;">
-		Footer
-		<select name="fontSize" onchange="fontSize(this, 'footer')" autocomplete="off">
-		  <option value="10">10</option>
-		  <option value="20">20</option>
-		  <option value="30">30</option>
-		  <option value="40">40</option>
-		</select>
-
-		<h4>Background Color</h4>
-		 <input type="color" name="bgColor" oninput="backgroundColor(this, 'footer')" value="#FFFFFF" autocomplete="off">
-		<h4>Text Color</h4>
-		<input type="color" name="textColor" oninput="textColor(this, 'footer')" value="#000000" autocomplete="off">
-		this is footer
-
-	</div>
-
-
-	<h4>Logo</h4>
-	<img id="logo-ctr" width="200" height="50" autocomplete="off">
-	<img id="logo-cmp" width="200" height="50" autocomplete="off">
-	<input type="file" accept="image/*" onchange="previewImage(event, 'logo-ctr', 'logo-cmp')" name='logo' autocomplete="off">
-
-
-	<h4>Banner</h4>
-	<img id="banner-ctrl" width="200" height="50" autocomplete="off">
-	<img id="banner-cmp" width="800" height="400" autocomplete="off">
-	<input type="file" accept="image/*" onchange="previewImage(event, 'banner-ctrl', 'banner-cmp')" name='banner' autocomplete="off">
-
-</div> -->

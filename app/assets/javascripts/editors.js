@@ -161,12 +161,12 @@ function previewImage(e, control, component)	{
  		    image.src = theFile.target.result;
 
  		    image.onload = function() {
- 		        if(this.width == cmpImg.width && this.height == cmpImg.height){
+ 		        // if(this.width == cmpImg.width && this.height == cmpImg.height){
  					ctrlImg.src = this.src;
  	 				cmpImg.src = this.src;
- 		        }else{
- 		        	alert("Sorry, " + e.target.name + "'s width and height not as expected.");
- 		        }
+ 		        // }else{
+ 		        	// alert("Sorry, " + e.target.name + "'s width and height not as expected.");
+ 		        // }
  		    }
  		})
  		reader.readAsDataURL(files);

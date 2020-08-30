@@ -128,7 +128,7 @@ ul {
   margin: 30px;
 }
 
-.logo__image {
+.logo_image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,7 +165,7 @@ ul {
   margin-bottom: 40px;
 }
 
-.banner__image {
+.banner_image {
   display: flex;
   justify-content: center;
   align-items: center;
