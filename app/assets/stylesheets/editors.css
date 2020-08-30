@@ -53,6 +53,11 @@ body {
   padding: 5px 0;
 }
 
+ #banner-cmp, .img-section {
+  background-color: #ececec;
+  border: 1px dashed #929292;
+}
+
 .button {
   border: none;
   color: white;
@@ -82,7 +87,7 @@ select {
   display: inline-flex;
   flex: auto;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: 'space-evenly';
 }
 
 .nav-format label,
