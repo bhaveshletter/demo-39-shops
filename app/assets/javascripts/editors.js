@@ -9,7 +9,7 @@ function textColor(e, component, tag){
 	var colorValue = e.value;
 	if(tag){	// TODO: find better way
 		var elements = document.getElementById(component).getElementsByTagName(tag);
-    	for (let i = 0; i < elements.length; i++) {
+    	for (var i = 0; i < elements.length; i++) {
 			elements[i].style.color = colorValue;
 		}
 	} else {
@@ -29,7 +29,7 @@ function fontFamily(e, component, tag){
 	var fontValue = e.options[e.selectedIndex].value;
 	if(tag){	// TODO: find better way
 		var elements = document.getElementById(component).getElementsByTagName(tag);
-    	for (let i = 0; i < elements.length; i++) {
+    	for (var i = 0; i < elements.length; i++) {
 			elements[i].style.fontFamily = fontValue;
 		}
 	} else {
@@ -44,7 +44,7 @@ function fontBold(e, component, tag){
 
 	if(tag){	// TODO: find better way
 		let elements = document.getElementById(component).getElementsByTagName(tag);
-    	for (let i = 0; i < elements.length; i++) {
+    	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontWeight == cssStyle){
 				element.fontWeight = '';
@@ -69,7 +69,7 @@ function fontItalic(e, component, tag){
 
 	if(tag){	// TODO: find better way
 		let elements = document.getElementById(component).getElementsByTagName(tag);
-    	for (let i = 0; i < elements.length; i++) {
+    	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontStyle == cssStyle){
 				element.fontStyle = '';
@@ -94,7 +94,7 @@ function fontSmallCaps(e, component, tag){
 
 	if(tag){	// TODO: find better way
 		let elements = document.getElementById(component).getElementsByTagName(tag);
-    	for (let i = 0; i < elements.length; i++) {
+    	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontVariant == cssStyle){
 				element.fontVariant = '';
@@ -118,7 +118,7 @@ function fontUnderline(e, component, tag){
 
 	if(tag){	// TODO: find better way
 		let elements = document.getElementById(component).getElementsByTagName(tag);
-    	for (let i = 0; i < elements.length; i++) {
+    	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.textDecoration == cssStyle){
 				element.textDecoration = '';
