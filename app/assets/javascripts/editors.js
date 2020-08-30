@@ -40,10 +40,10 @@ function fontFamily(e, component, tag){
 
 // START font styling
 function fontBold(e, component, tag){
-	let cssStyle = 700;
+	var cssStyle = 700;
 
 	if(tag){	// TODO: find better way
-		let elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = document.getElementById(component).getElementsByTagName(tag);
     	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontWeight == cssStyle){
@@ -53,7 +53,7 @@ function fontBold(e, component, tag){
     		}
 		}
 	} else {
-		let element = document.getElementById(component).style;
+		var element = document.getElementById(component).style;
 		if(element.fontWeight == cssStyle){
 			element.fontWeight = '';
 		} else {
@@ -65,10 +65,10 @@ function fontBold(e, component, tag){
 }
 
 function fontItalic(e, component, tag){
-	let cssStyle = 'italic';
+	var cssStyle = 'italic';
 
 	if(tag){	// TODO: find better way
-		let elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = document.getElementById(component).getElementsByTagName(tag);
     	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontStyle == cssStyle){
@@ -78,7 +78,7 @@ function fontItalic(e, component, tag){
     		}
 		}
 	} else {
-		let element = document.getElementById(component).style;
+		var element = document.getElementById(component).style;
 		if(element.fontStyle == cssStyle){
 			element.fontStyle = '';
 		} else {
@@ -90,10 +90,10 @@ function fontItalic(e, component, tag){
 }
 
 function fontSmallCaps(e, component, tag){
-	let cssStyle = 'small-caps';
+	var cssStyle = 'small-caps';
 
 	if(tag){	// TODO: find better way
-		let elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = document.getElementById(component).getElementsByTagName(tag);
     	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontVariant == cssStyle){
@@ -103,7 +103,7 @@ function fontSmallCaps(e, component, tag){
     		}
 		}
 	} else {
-		let element = document.getElementById(component).style;
+		var element = document.getElementById(component).style;
 		if(element.fontVariant == cssStyle){
 			element.fontVariant = '';
 		} else {
@@ -114,10 +114,10 @@ function fontSmallCaps(e, component, tag){
 }
 
 function fontUnderline(e, component, tag){
-	let cssStyle = 'underline';
+	var cssStyle = 'underline';
 
 	if(tag){	// TODO: find better way
-		let elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = document.getElementById(component).getElementsByTagName(tag);
     	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.textDecoration == cssStyle){
@@ -127,7 +127,7 @@ function fontUnderline(e, component, tag){
     		}
 		}
 	} else {
-		let element = document.getElementById(component).style;
+		var element = document.getElementById(component).style;
 		if(element.textDecoration == cssStyle){
 			element.textDecoration = '';
 		} else {
@@ -139,7 +139,7 @@ function fontUnderline(e, component, tag){
 }
 
 function resetSelected(e){
-	let cssCls = 'selected';
+	var cssCls = 'selected';
   	if (e.classList.contains(cssCls)) {
     	e.classList.remove(cssCls);
   	} else {
