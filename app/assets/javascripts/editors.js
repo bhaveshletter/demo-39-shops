@@ -1,9 +1,25 @@
-function preview_image(event, id1, id2)	{
- 	var ctrlImg = document.getElementById(id1),
- 		cmpImg = document.getElementById(id2);
+function backgroundColor(e, component){
+	document.getElementById(component).style.backgroundColor = e.value;
+}
+
+function textColor(e, component){
+	document.getElementById(component).style.color = e.value;
+}
+
+function fontSize(e, component){
+	document.getElementById(component).style.fontSize = e.options[e.selectedIndex].value.toString() + 'px';
+}
+
+function fontFamily(e, component){
+	document.getElementById(component).style.fontFamily = e.options[e.selectedIndex].value;
+}
+
+function previewImage(e, control, component)	{
+ 	var ctrlImg = document.getElementById(control),
+ 		cmpImg = document.getElementById(component);
 
    	if(ctrlImg && cmpImg){
- 	    var files = event.target.files[0],
+ 	    var files = e.target.files[0],
  	    	reader = new FileReader();
 
  		reader.onload = (function(theFile) {
@@ -15,7 +31,7 @@ function preview_image(event, id1, id2)	{
  					ctrlImg.src = this.src;
  	 				cmpImg.src = this.src;
  		        }else{
- 		        	alert("Sorry, " + event.target.name + "'s width and height not as expected.");
+ 		        	alert("Sorry, " + e.target.name + "'s width and height not as expected.");
  		        }
  		    }
  		})

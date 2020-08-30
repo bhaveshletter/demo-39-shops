@@ -1,12 +1,71 @@
-<h1>Editors#index</h1>
+<div style="border-style: ridge;" id='body'>
 
-<h4>Logo</h4>
-<img id="output_image1" width="200" height="50">
-<img id="output_image" width="200" height="50">
-<input type="file" accept="image/*" onchange="preview_image(event, 'output_image', 'output_image1')" name='logo' id='logo'>
+	<h1>Editors#index</h1>
+
+	<h4>Background Color</h4>
+	 <input type="color" name="bgColor" oninput="backgroundColor(this, 'body')" value="#FFFFFF" autocomplete="off">
+
+	<div id='header' style="border-style: dotted;">
+		Header
+		<h4>Background Color</h4>
+		 <input type="color" name="bgColor" oninput="backgroundColor(this, 'header')" value="#FFFFFF" autocomplete="off">
+		<h4>Text Color</h4>
+		<input type="color" name="textColor" oninput="textColor(this, 'header')" value="#000000" autocomplete="off">
+		this is heder
+	</div>
+
+	<div id='content' style="border-style: solid;">
+		Content
+		<h4>Text Color</h4>
+		<input type="color" name="textColor" oninput="textColor(this, 'content')" value="#000000" autocomplete="off">
+
+		<select name="fontSize" onchange="fontSize(this, 'content')" autocomplete="off">
+		  <option value="10">10</option>
+		  <option value="20">20</option>
+		  <option value="30">30</option>
+		  <option value="40">40</option>
+		</select>
+
+		<select name="fontFamily" onchange="fontFamily(this, 'content')" autocomplete="off">
+			<option value="" disabled selected></option>
+			<option value="Georgia, serif">Georgia, serif</option>
+			<option value="sans-serif">sans-serif</option>
+			<option value="fantasy">fantasy</option>
+			<option value="ui-sans-serif">ui-sans-serif</option>
+			<option value="Arial Narrow">Arial Narrow</option>
+		</select>
+
+		This is content. this is like paragraph
+	</div>
 
 
-<h4>Banner</h4>
-<img id="banner_image" width="200" height="50">
-<img id="banner_image1" width="800" height="400">
-<input type="file" accept="image/*" onchange="preview_image(event, 'banner_image', 'banner_image1')" name='banner' id='banner'>
+	<div id='footer' style="border-style: double;">
+		Footer
+		<select name="fontSize" onchange="fontSize(this, 'footer')" autocomplete="off">
+		  <option value="10">10</option>
+		  <option value="20">20</option>
+		  <option value="30">30</option>
+		  <option value="40">40</option>
+		</select>
+
+		<h4>Background Color</h4>
+		 <input type="color" name="bgColor" oninput="backgroundColor(this, 'footer')" value="#FFFFFF" autocomplete="off">
+		<h4>Text Color</h4>
+		<input type="color" name="textColor" oninput="textColor(this, 'footer')" value="#000000" autocomplete="off">
+		this is footer
+
+	</div>
+
+
+	<h4>Logo</h4>
+	<img id="logo-ctr" width="200" height="50" autocomplete="off">
+	<img id="logo-cmp" width="200" height="50" autocomplete="off">
+	<input type="file" accept="image/*" onchange="previewImage(event, 'logo-ctr', 'logo-cmp')" name='logo' autocomplete="off">
+
+
+	<h4>Banner</h4>
+	<img id="banner-ctrl" width="200" height="50" autocomplete="off">
+	<img id="banner-cmp" width="800" height="400" autocomplete="off">
+	<input type="file" accept="image/*" onchange="previewImage(event, 'banner-ctrl', 'banner-cmp')" name='banner' autocomplete="off">
+
+</div>
