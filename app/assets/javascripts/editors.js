@@ -11,11 +11,11 @@ function preview_image(event, id1, id2)	{
  		    image.src = theFile.target.result;
 
  		    image.onload = function() {
- 		        if(this.width == cmpImg.width && this.height == cmpImg.height && this.width == ctrlImg.width && this.height == ctrlImg.height){
+ 		        if(this.width == cmpImg.width && this.height == cmpImg.height){
  					ctrlImg.src = this.src;
  	 				cmpImg.src = this.src;
  		        }else{
- 		        	alert("Sorry, width and height not as expected.");
+ 		        	alert("Sorry, " + event.target.name + "'s width and height not as expected.");
  		        }
  		    }
  		})
