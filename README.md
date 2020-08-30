@@ -2,9 +2,9 @@
 Simple pure javascript & css editor which can make basic cosmetic changes of static content like backgroud, link and text color, font type, size and style, image previews with basic constraints.
 
 #### Tech. Details
-Ruby 2.6.3 & Rails 6.0.3.2
+Ruby 2.6.3, Rails 5.2.4.3, PostgreSQL
 
-#### Below steps to configure and run app local machine 
+#### Below steps to configure and run app local machine
 
 * bundle
 
@@ -15,4 +15,4 @@ Ruby 2.6.3 & Rails 6.0.3.2
 * http://localhost:3000
 
 
-[Live Demo](http://code-39-shops.herokuapp.com/)
+[Live Demo](http://demo-39-shops.herokuapp.com/)
