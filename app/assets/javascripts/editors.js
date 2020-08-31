@@ -1,6 +1,6 @@
 // START background color
 function backgroundColor(e, component){
-	document.getElementById(component).style.backgroundColor = e.value;
+	getDom(component).style.backgroundColor = e.value;
 }
 // END background color
 
@@ -8,19 +8,19 @@ function backgroundColor(e, component){
 function textColor(e, component, tag){
 	var colorValue = e.value;
 	if(tag){	// TODO: find better way
-		var elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = getDom(component, tag);
     	for (var i = 0; i < elements.length; i++) {
 			elements[i].style.color = colorValue;
 		}
 	} else {
-		document.getElementById(component).style.color = colorValue;
+		getDom(component).style.color = colorValue;
 	}
 }
 // END text color
 
 // START text size
 function fontSize(e, component){
-	document.getElementById(component).style.fontSize = e.options[e.selectedIndex].value;
+	getDom(component).style.fontSize = e.options[e.selectedIndex].value;
 }
 // END text size
 
@@ -28,12 +28,12 @@ function fontSize(e, component){
 function fontFamily(e, component, tag){
 	var fontValue = e.options[e.selectedIndex].value;
 	if(tag){	// TODO: find better way
-		var elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = getDom(component, tag);
     	for (var i = 0; i < elements.length; i++) {
 			elements[i].style.fontFamily = fontValue;
 		}
 	} else {
-		document.getElementById(component).style.fontFamily = fontValue
+		getDom(component).style.fontFamily = fontValue
 	}
 }
 // END font family
@@ -43,7 +43,7 @@ function fontBold(e, component, tag){
 	var cssStyle = 700;
 
 	if(tag){	// TODO: find better way
-		var elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = getDom(component, tag);
     	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontWeight == cssStyle){
@@ -53,7 +53,7 @@ function fontBold(e, component, tag){
     		}
 		}
 	} else {
-		var element = document.getElementById(component).style;
+		var element = getDom(component).style;
 		if(element.fontWeight == cssStyle){
 			element.fontWeight = '';
 		} else {
@@ -68,7 +68,7 @@ function fontItalic(e, component, tag){
 	var cssStyle = 'italic';
 
 	if(tag){	// TODO: find better way
-		var elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = getDom(component, tag);
     	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontStyle == cssStyle){
@@ -78,7 +78,7 @@ function fontItalic(e, component, tag){
     		}
 		}
 	} else {
-		var element = document.getElementById(component).style;
+		var element = getDom(component).style;
 		if(element.fontStyle == cssStyle){
 			element.fontStyle = '';
 		} else {
@@ -93,7 +93,7 @@ function fontSmallCaps(e, component, tag){
 	var cssStyle = 'small-caps';
 
 	if(tag){	// TODO: find better way
-		var elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = getDom(component, tag);
     	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.fontVariant == cssStyle){
@@ -103,7 +103,7 @@ function fontSmallCaps(e, component, tag){
     		}
 		}
 	} else {
-		var element = document.getElementById(component).style;
+		var element = getDom(component).style;
 		if(element.fontVariant == cssStyle){
 			element.fontVariant = '';
 		} else {
@@ -117,7 +117,7 @@ function fontUnderline(e, component, tag){
 	var cssStyle = 'underline';
 
 	if(tag){	// TODO: find better way
-		var elements = document.getElementById(component).getElementsByTagName(tag);
+		var elements = getDom(component, tag);
     	for (var i = 0; i < elements.length; i++) {
     		var element = elements[i].style;
     		if(element.textDecoration == cssStyle){
@@ -127,7 +127,7 @@ function fontUnderline(e, component, tag){
     		}
 		}
 	} else {
-		var element = document.getElementById(component).style;
+		var element = getDom(component).style;
 		if(element.textDecoration == cssStyle){
 			element.textDecoration = '';
 		} else {
@@ -149,9 +149,9 @@ function resetSelected(e){
 // END font styling
 
 // START render image locally at target and current position
-function previewImage(e, control, component)	{
- 	var ctrlImg = document.getElementById(control),
- 		cmpImg = document.getElementById(component);
+function previewImage(e, control, component){
+ 	var ctrlImg = getDom(control),
+ 		cmpImg = getDom(component);
 
    	if(ctrlImg && cmpImg){
  	    var files = e.target.files[0],
@@ -176,3 +176,14 @@ function previewImage(e, control, component)	{
    	}
 }
 // END render image locally at target and current position
+
+// START get dom
+function getDom(id, tag){
+	if(tag){
+		return document.getElementById(id).getElementsByTagName(tag);
+	} else {
+		return document.getElementById(id);
+	}
+
+}
+// END get dom
