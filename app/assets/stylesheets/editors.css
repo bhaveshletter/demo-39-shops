@@ -51,8 +51,13 @@ body {
 }
 
  #banner-cmp, .img-section {
-  background-color: #ececec;
-  border: 1px dashed #929292;
+  border: 1px solid #929292;
+  background-color: #929292;
+  padding: 10px 60px;
+}
+
+.img-caption {
+  padding-bottom: 10px;
 }
 
 .button {
@@ -145,7 +150,7 @@ ul {
   margin: 30px;
 }
 
-.logo_image {
+.logo-image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,7 +187,7 @@ ul {
   margin-bottom: 40px;
 }
 
-.banner_image {
+.banner-image {
   display: flex;
   justify-content: center;
   align-items: center;
