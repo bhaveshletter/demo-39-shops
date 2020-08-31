@@ -13,7 +13,7 @@ body {
   flex-direction: row;
 }
 
-/* CSS for left */
+/* START controls style */
 .left-container {
   margin: 10px;
   padding: 5px;
@@ -90,18 +90,33 @@ ul {
   display: inline-flex;
   flex: auto;
   width: 100%;
-  justify-content: space-evenly;
   justify-content: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
 .nav-format ul li {
   max-width: 100%;
-  border: 1px solid #ececec;
+  border: 1px solid #c1b8b8;
   list-style: none;
-  padding: 6px;
+  padding: 3px 9px;
   cursor: pointer;
 }
 .nav-format ul li:hover {
@@ -114,7 +129,9 @@ ul {
   color: #fff;
 }
 
-/* CSS for right Side */
+/* END controls style */
+
+/* START editor style */
 .right-container {
   margin: 10px;
   padding: 5px;
@@ -209,11 +226,14 @@ ul {
   margin-top: 100px;
 }
 
-/* class to apply on image */
 .rimg {
   max-width: 100%;
   max-height: 100%;
 }
+
+/* END editor style */
+
+/* START top strip */
 
 .top-strip {
   display: flex;
@@ -233,3 +253,5 @@ ul {
   margin-top: 12px;
   margin-right: 100px;
 }
+
+/* END top strip */

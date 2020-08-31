@@ -148,6 +148,7 @@ function resetSelected(e){
 }
 // END font styling
 
+// START render image locally at target and current position
 function previewImage(e, control, component)	{
  	var ctrlImg = document.getElementById(control),
  		cmpImg = document.getElementById(component);
@@ -174,3 +175,4 @@ function previewImage(e, control, component)	{
  		alert("Sorry, Please contact support. error code: EPM");
    	}
 }
+// END render image locally at target and current position
