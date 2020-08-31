@@ -22,9 +22,6 @@ body {
   width: 25%;
 }
 
-.edit-logo,
-.edit-navigation,
-.edit-mainBanner,
 .edit-heading {
   background-color: #fff;
   padding: 10px;
@@ -73,21 +70,19 @@ body {
 }
 
 .nav-bg,
-.nav-color {
-  padding: 8px 0;
-}
+.nav-color,
 .nav-font,
 .nav-format {
   display: flex;
   padding: 10px 0;
+  align-items: center;
 }
-.nav-font label,
+.nav-bg label, .nav-color label, .nav-font label,
 input[type="text"],
 select {
   display: inline-flex;
   flex: auto;
   width: 100%;
-  justify-content: 'space-evenly';
 }
 
 .nav-format label,

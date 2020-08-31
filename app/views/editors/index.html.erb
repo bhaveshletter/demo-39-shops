@@ -10,13 +10,13 @@
   	<!-- START control panel -->
 	<section class="left-container">
 		<!-- START logi -->
-		<div class="edit-logo">
+		<div class="edit-heading">
 			<%= render 'shared/image', caption: '<b>Logo</b> (200px x 50px)', id: 'logo-ctr', target: 'logo-cmp', name: 'logo' %>
 		</div>
 		<!-- END logi -->
 
 		<!-- START navigation menu -->
-		<div class="edit-navigation">
+		<div class="edit-heading">
 			<div><b>Navigation Menu</b></div>
 			<%= render 'shared/background_color', caption: 'Background Color', id: 'nv-bg', target: 'editor-navigation', color: '' %>
 			<%= render 'shared/text_color', caption: 'Link Color', id: 'nv-co', target: 'editor-navigation', color: '', tag: 'a' %>
@@ -26,7 +26,7 @@
 		<!-- END navigation menu -->
 
 		<!-- START main banner -->
-		<div class="edit-mainBanner">
+		<div class="edit-heading">
 			<%= render 'shared/image', caption: '<b>Main Banner</b> (800px x 400px)', id: 'banner-ctrl', target: 'banner-cmp', name: 'banner' %>
 		</div>
 		<!-- END main banner -->
@@ -66,7 +66,6 @@
 		<!-- END footer -->
 	</section>
 	<!-- START control panel -->
-
 
 	<!-- START template -->
 	<section class="right-container" id='editor-content'>
